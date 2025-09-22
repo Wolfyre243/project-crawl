@@ -9,6 +9,7 @@ import { BullModule } from '@nestjs/bullmq';
       connection: {
         host: process.env.REDIS_HOST,
         port: parseInt(process.env.REDIS_PORT as string, 10),
+        password: process.env.REDIS_PASSWORD,
       },
       defaultJobOptions: { attempts: 3 }
     }),
